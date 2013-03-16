@@ -12,10 +12,21 @@
     <artifactId>petclinic-screenplay</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>petclinic-screenplay</name>
-    <url>http://maven.apache.org</url>
+    <url>http://www.riverglide.com</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cargo.logging>low</cargo.logging>
     </properties>
+
+    <profiles>
+        <profile>
+            <id>verbose</id>
+            <properties>
+                <cargo.logging>medium</cargo.logging>
+            </properties>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -107,6 +118,7 @@
                         <properties>
                             <cargo.servlet.port>8888</cargo.servlet.port>
                             <cargo.tomcat.ajp.port>8889</cargo.tomcat.ajp.port>
+                            <cargo.logging>${cargo.logging}</cargo.logging>
                         </properties>
                     </configuration>
                 </configuration>
