@@ -1,3 +1,4 @@
 [submodule "petclinic"]
 	path = petclinic
 	url = https://github.com/SpringSource/spring-petclinic.git
+	ignore = untracked
