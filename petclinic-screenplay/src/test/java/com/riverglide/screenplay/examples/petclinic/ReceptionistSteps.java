@@ -1,5 +1,7 @@
 package com.riverglide.screenplay.examples.petclinic;
 
+import com.gargoylesoftware.htmlunit.SilentCssErrorHandler;
+import com.gargoylesoftware.htmlunit.WebClient;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,7 +18,14 @@ public class ReceptionistSteps {
 
     @When("^I get started$")
     public void I_get_started() throws Throwable {
-        driver = new HtmlUnitDriver();
+        driver = new HtmlUnitDriver() {
+            @Override
+            protected WebClient modifyWebClient(WebClient client) {
+                client.setCssErrorHandler(new SilentCssErrorHandler());
+                return client;
+            }
+        };
+
         String petClinicHomePage = "http://localhost:8888/petclinic";
         driver.get(petClinicHomePage);
     }
