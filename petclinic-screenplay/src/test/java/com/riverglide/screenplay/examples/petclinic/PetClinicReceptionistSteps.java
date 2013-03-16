@@ -17,7 +17,7 @@ public class PetClinicReceptionistSteps {
     @When("^I get started$")
     public void I_get_started() throws Throwable {
         driver = new FirefoxDriver();
-        String petClinicHomePage = "http://localhost:9966/petclinic";
+        String petClinicHomePage = "http://localhost:8888/petclinic";
         driver.get(petClinicHomePage);
     }
 
