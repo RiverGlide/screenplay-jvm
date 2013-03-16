@@ -5,7 +5,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -16,7 +16,7 @@ public class ReceptionistSteps {
 
     @When("^I get started$")
     public void I_get_started() throws Throwable {
-        driver = new FirefoxDriver();
+        driver = new HtmlUnitDriver();
         String petClinicHomePage = "http://localhost:8888/petclinic";
         driver.get(petClinicHomePage);
     }
