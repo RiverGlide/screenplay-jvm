@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class PetClinicReceptionistSteps {
+public class ReceptionistSteps {
 
     private WebDriver driver;
 
