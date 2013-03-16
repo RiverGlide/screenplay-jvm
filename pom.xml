@@ -15,6 +15,7 @@
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
         <junit.version>4.11</junit.version>
         <cucumber.version>1.1.2</cucumber.version>
+        <selenium.version>2.31.0</selenium.version>
     </properties>
 
     <modules>
