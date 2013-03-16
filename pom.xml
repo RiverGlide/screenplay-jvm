@@ -13,6 +13,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.build.timestamp.format>HH:mm dd-MM-yyyy</maven.build.timestamp.format>
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
+        <junit.version>4.11</junit.version>
+        <cucumber.version>1.1.2</cucumber.version>
     </properties>
 
     <modules>
