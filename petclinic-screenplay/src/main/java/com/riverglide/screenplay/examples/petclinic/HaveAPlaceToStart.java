@@ -3,7 +3,7 @@ package com.riverglide.screenplay.examples.petclinic;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class HaveAPlaceToStart extends WebInteraction implements Perform {
+public class HaveAPlaceToStart implements Perform {
 
     @Override
     public void performAs(Actor actor) {
