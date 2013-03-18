@@ -8,6 +8,7 @@ import java.util.Map;
 public class Actor {
 
     Map abilities = new HashMap();
+    private String it;
 
     //TODO: This needs to be generic
     public Actor with(WebDriver ability) {
@@ -20,14 +21,28 @@ public class Actor {
     }
 
     public void attemptsTo(Perform interactionOrTask) {
-        interactionOrTask.performAs(this);
+        attempt(interactionOrTask);
     }
 
     public void should(Perform expectationCheck) {
-        attemptsTo(expectationCheck);
+        attempt(expectationCheck);
     }
 
-    public <T> T tellsYou(Question question) {
-        return (T) question.answeredBy(this);
+    public void doesTheFollowing(Perform...tasks) {
+        for(Perform task : tasks) {
+            attempt(task);
+        }
+    }
+
+    public void remember(String it) {
+        this.it = it;
+    }
+
+    public String getIt() {
+        return it;
+    }
+
+    private void attempt(Perform task) {
+        task.performAs(this);
     }
 }
