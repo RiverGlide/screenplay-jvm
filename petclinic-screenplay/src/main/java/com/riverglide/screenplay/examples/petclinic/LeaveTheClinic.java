@@ -5,7 +5,6 @@ public class LeaveTheClinic implements Perform {
         return new LeaveTheClinic();
     }
 
-    @Override
     public void performAs(Actor actor) {
         actor.attemptsTo(Quit.theBrowser());
     }

@@ -13,7 +13,6 @@ public class PetClinicReceptionist implements Role {
         actor = new Actor().with(webBrowsingAbility);
     }
 
-    @Override
     public Actor actor() {
         return actor;
     }

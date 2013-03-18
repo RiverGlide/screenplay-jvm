@@ -5,11 +5,10 @@ import org.openqa.selenium.By;
 public class ReadTheText extends WebInteraction implements Perform {
     private final By elementLocation;
 
-    public static Perform of(By elementLocation) {
+    public static Perform ofThe(By elementLocation) {
         return new ReadTheText(elementLocation);
     }
 
-    @Override
     public void performAs(Actor actor) {
         String it = webUser(actor).findElement(elementLocation).getText();
         actor.remember(it);
