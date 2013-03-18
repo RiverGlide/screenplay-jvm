@@ -11,8 +11,8 @@ public class ItSays implements Perform {
     }
 
     public void performAs(Actor actor) {
-        String information = actor.getIt();
-        assertThat(information, is(asExpected));
+        String it = actor.getIt();
+        assertThat(it, is(asExpected));
     }
 
     private ItSays(String something) {
