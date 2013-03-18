@@ -1,6 +1,5 @@
 package com.riverglide.screenplay.examples.petclinic;
 
-import com.riverglide.screenplay.examples.petclinic.Screen;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
