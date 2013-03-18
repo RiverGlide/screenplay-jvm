@@ -1,16 +1,9 @@
 package com.riverglide.screenplay.examples.petclinic;
 
-import org.openqa.selenium.WebDriver;
+import static com.riverglide.screenplay.examples.petclinic.QuitTheBrowser.quitTheBrowser;
 
-public class Quit implements Perform {
-    @Override
-    public void performAs(Actor actor) {
-        ((WebDriver)actor.ability(WebDriver.class)).quit();
-    }
-
-    private Quit(){}
-
-    public static Quit theBrowser() {
-        return new Quit();
+public class Quit {
+    public static Perform theBrowser() {
+        return quitTheBrowser();
     }
 }

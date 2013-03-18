@@ -19,7 +19,7 @@ public class ReceptionistSteps {
     }
 
     @After
-    public void closeBrowser() {
-        receptionist.attemptsTo(Quit.theBrowser());
+    public void goHome() {
+        receptionist.attemptsTo(Leave.theClinic());
     }
 }
