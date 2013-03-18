@@ -1,20 +1,20 @@
 package com.riverglide.screenplay.examples.petclinic;
 
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
 
 public class Text extends WebInteraction implements Question<String> {
-    private final WebElement webElement;
+    private final By elementLocation;
 
-    public Text(WebElement webElement) {
-        this.webElement = webElement;
+    public Text(By elementLocation) {
+        this.elementLocation = elementLocation;
     }
 
     @Override
     public String answeredBy(Actor actor) {
-        return webElement.getText();
+        return webUser(actor).findElement(elementLocation).getText();
     }
 
-    public static Question of(WebElement webElement) {
-        return new Text(webElement);
+    public static Question of(By elementLocation) {
+        return new Text(elementLocation);
     }
 }
