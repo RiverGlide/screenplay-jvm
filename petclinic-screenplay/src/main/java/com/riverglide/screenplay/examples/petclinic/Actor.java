@@ -23,6 +23,10 @@ public class Actor {
         interactionOrTask.performAs(this);
     }
 
+    public void should(Perform expectationCheck) {
+        attemptsTo(expectationCheck);
+    }
+
     public <T> T tellsYou(Question question) {
         return (T) question.answeredBy(this);
     }
