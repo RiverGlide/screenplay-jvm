@@ -22,4 +22,8 @@ public class Actor {
     public void attemptsTo(Perform interactionOrTask) {
         interactionOrTask.performAs(this);
     }
+
+    public <T> T tellsYou(Question question) {
+        return (T) question.answeredBy(this);
+    }
 }

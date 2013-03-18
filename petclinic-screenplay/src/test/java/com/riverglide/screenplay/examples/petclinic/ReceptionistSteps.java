@@ -26,7 +26,7 @@ public class ReceptionistSteps {
     //TODO: Let's discuss this one... should the actor answer questions?
     @Then("^I should feel welcome$")
     public void I_should_feel_welcome() throws Throwable {
-        String message = homeScreen().welcomeMessage().getText();
+        String message = receptionist.tellsYou(Text.of(homeScreen().welcomeMessage()));
         assertThat(message, is("Welcome"));
     }
 
