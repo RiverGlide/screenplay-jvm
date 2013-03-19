@@ -1,4 +1,4 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay;
 
 public class Ensure implements Perform {
     private final Perform expectation;

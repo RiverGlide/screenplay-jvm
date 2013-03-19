@@ -2,6 +2,8 @@ package com.riverglide.screenplay.examples.petclinic;
 
 import com.gargoylesoftware.htmlunit.SilentCssErrorHandler;
 import com.gargoylesoftware.htmlunit.WebClient;
+import com.riverglide.screenplay.Actor;
+import com.riverglide.screenplay.Role;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 

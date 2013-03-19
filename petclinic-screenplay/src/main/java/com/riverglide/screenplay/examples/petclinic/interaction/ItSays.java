@@ -1,4 +1,7 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay.examples.petclinic.interaction;
+
+import com.riverglide.screenplay.Actor;
+import com.riverglide.screenplay.Perform;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

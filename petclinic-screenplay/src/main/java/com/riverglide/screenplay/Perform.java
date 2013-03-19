@@ -1,4 +1,4 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay;
 
 public interface Perform {
     void performAs(Actor actor);

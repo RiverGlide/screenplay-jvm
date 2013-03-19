@@ -1,4 +1,8 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay.examples.petclinic.interaction;
+
+import com.riverglide.screenplay.Actor;
+import com.riverglide.screenplay.Perform;
+import com.riverglide.screenplay.WebInteraction;
 
 public class QuitTheBrowser extends WebInteraction implements Perform {
 

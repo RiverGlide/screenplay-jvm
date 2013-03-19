@@ -1,4 +1,8 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay.examples.petclinic.tasks;
+
+import com.riverglide.screenplay.Actor;
+import com.riverglide.screenplay.Perform;
+import com.riverglide.screenplay.examples.petclinic.interaction.Quit;
 
 public class LeaveTheClinic implements Perform {
     public static LeaveTheClinic leaveTheClinic() {

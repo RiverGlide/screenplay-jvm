@@ -1,4 +1,9 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay.examples.petclinic.tasks;
+
+import com.riverglide.screenplay.Actor;
+import com.riverglide.screenplay.examples.petclinic.interaction.Navigate;
+import com.riverglide.screenplay.Perform;
+import com.riverglide.screenplay.examples.petclinic.screen.Home;
 
 public class StartHelpingACustomer implements Perform {
 

@@ -1,5 +1,6 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay.examples.petclinic.screen;
 
+import com.riverglide.screenplay.Screen;
 import org.openqa.selenium.By;
 
 public class Home implements Screen {

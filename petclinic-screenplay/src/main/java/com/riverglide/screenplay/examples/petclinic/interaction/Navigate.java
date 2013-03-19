@@ -1,4 +1,9 @@
-package com.riverglide.screenplay.examples.petclinic;
+package com.riverglide.screenplay.examples.petclinic.interaction;
+
+import com.riverglide.screenplay.Actor;
+import com.riverglide.screenplay.Perform;
+import com.riverglide.screenplay.Screen;
+import com.riverglide.screenplay.WebInteraction;
 
 public class Navigate extends WebInteraction implements Perform {
 
