@@ -23,7 +23,7 @@
     <modules>
         <module>screenplay</module>
         <module>petclinic-screenplay</module>
-	<module>petclinic</module>
+	    <module>petclinic</module>
     </modules>
 
     <build>
