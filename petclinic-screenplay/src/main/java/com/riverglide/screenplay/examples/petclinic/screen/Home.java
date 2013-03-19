@@ -13,7 +13,7 @@ public class Home implements Screen {
         return url;
     }
 
-    public static Home location() {
+    public static Home screen() {
         return new Home();
     }
 }

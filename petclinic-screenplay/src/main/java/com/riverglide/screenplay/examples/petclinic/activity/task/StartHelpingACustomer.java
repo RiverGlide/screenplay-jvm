@@ -7,7 +7,7 @@ import com.riverglide.screenplay.examples.petclinic.screen.Home;
 
 public class StartHelpingACustomer implements Perform {
 
-    private Home location = Home.location();
+    private Home location = Home.screen();
 
     public void performAs(Actor actor) {
         actor.attemptsTo(Go.toThe(location));
