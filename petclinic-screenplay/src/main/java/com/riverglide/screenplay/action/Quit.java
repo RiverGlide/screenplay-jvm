@@ -1,7 +1,7 @@
-package com.riverglide.screenplay.examples.petclinic.action;
+package com.riverglide.screenplay.action;
 
 import com.riverglide.screenplay.Perform;
-import com.riverglide.screenplay.examples.petclinic.action.interaction.QuitTheBrowser;
+import com.riverglide.screenplay.action.interaction.QuitTheBrowser;
 
 public class Quit {
     public static Perform theBrowser() {

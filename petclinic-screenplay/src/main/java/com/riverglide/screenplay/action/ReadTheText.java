@@ -1,9 +1,9 @@
-package com.riverglide.screenplay.examples.petclinic.action;
+package com.riverglide.screenplay.action;
 
 import com.riverglide.screenplay.Perform;
 import org.openqa.selenium.By;
 
-import static com.riverglide.screenplay.examples.petclinic.action.interaction.ReadTheTextOfThe.readTheTextOfThe;
+import static com.riverglide.screenplay.action.interaction.ReadTheTextOfThe.readTheTextOfThe;
 
 public class ReadTheText {
     public static Perform ofThe(By elementLocation) {
