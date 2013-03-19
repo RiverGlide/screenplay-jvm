@@ -1,9 +1,9 @@
 package com.riverglide.screenplay.examples.petclinic;
 
 import com.riverglide.screenplay.Actor;
-import com.riverglide.screenplay.examples.petclinic.tasks.HaveAPlace;
-import com.riverglide.screenplay.examples.petclinic.tasks.Leave;
-import com.riverglide.screenplay.examples.petclinic.tasks.Start;
+import com.riverglide.screenplay.examples.petclinic.activity.HaveAPlace;
+import com.riverglide.screenplay.examples.petclinic.activity.Leave;
+import com.riverglide.screenplay.examples.petclinic.activity.Start;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

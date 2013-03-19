@@ -1,11 +1,11 @@
-package com.riverglide.screenplay.examples.petclinic.interaction;
+package com.riverglide.screenplay.examples.petclinic.action.interaction;
 
 import com.riverglide.screenplay.Actor;
 import com.riverglide.screenplay.Perform;
-import com.riverglide.screenplay.WebInteraction;
+import com.riverglide.screenplay.WebDriverInteraction;
 import org.openqa.selenium.By;
 
-public class ReadTheTextOfThe extends WebInteraction implements Perform {
+public class ReadTheTextOfThe extends WebDriverInteraction implements Perform {
     private final By elementLocation;
 
     public static Perform readTheTextOfThe(By elementLocation) {
@@ -13,7 +13,7 @@ public class ReadTheTextOfThe extends WebInteraction implements Perform {
     }
 
     public void performAs(Actor actor) {
-        String it = webUser(actor).findElement(elementLocation).getText();
+        String it = web(actor).findElement(elementLocation).getText();
         actor.remember(it);
     }
 

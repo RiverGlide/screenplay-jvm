@@ -1,4 +1,4 @@
-package com.riverglide.screenplay.examples.petclinic.interaction;
+package com.riverglide.screenplay.examples.petclinic.action.interaction;
 
 import com.riverglide.screenplay.Actor;
 import com.riverglide.screenplay.Perform;

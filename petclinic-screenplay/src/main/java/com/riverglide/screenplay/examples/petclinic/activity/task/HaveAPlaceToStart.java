@@ -1,17 +1,17 @@
-package com.riverglide.screenplay.examples.petclinic.tasks;
+package com.riverglide.screenplay.examples.petclinic.activity.task;
 
 import com.riverglide.screenplay.Actor;
 import com.riverglide.screenplay.Ensure;
 import com.riverglide.screenplay.Perform;
-import com.riverglide.screenplay.examples.petclinic.interaction.It;
-import com.riverglide.screenplay.examples.petclinic.interaction.ReadTheText;
-import com.riverglide.screenplay.examples.petclinic.screen.Home;
+import com.riverglide.screenplay.examples.petclinic.action.It;
+import com.riverglide.screenplay.examples.petclinic.action.ReadTheText;
+import com.riverglide.screenplay.examples.petclinic.location.Home;
 
 public class HaveAPlaceToStart implements Perform {
 
     public void performAs(Actor actor) {
         actor.doesTheFollowing(
-            ReadTheText.ofThe(Home.screen().welcomeMessage()),
+            ReadTheText.ofThe(Home.location().welcomeMessage()),
             Ensure.that(It.says("Welcome"))
         );
     }
