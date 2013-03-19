@@ -1,0 +1,56 @@
+Feature: Find an owner
+  As a pet clinic receptionist
+  I want to find a pet owner's details
+  So that I can help them
+
+  Scenario: Browse all owners
+    Given I am a pet clinic receptionist
+    When I attempt to browse all of the owners
+    Then I should the following information for all owners:
+      | Name | Address | City | Telephone | Pets |
+
+  Scenario: Find a specific owner
+    Given I am a pet clinic receptionist
+    And I have received a call from Betty Davis
+    When I attempt to find her details
+    Then I should see the following information for them:
+      | Name        | Address           | City        | Telephone  | Pets  |
+      | Betty Davis | 638 Cardinal Ave.	| Sun Prairie	| 6085551749 | Basil |
+    
+
+
+------------------------------------------------------
+
+Feature: Add an owner
+  As a pet clinic receptionist
+  I want to register a pet owner
+  So that I can book them in
+
+  Scenario: Add an owner
+    Given I am a pet clinic receptionist
+    When I attempt to add an owner with the following:
+      | First Name | James             |
+      | Last Name  | Martin            |
+      | Address    | 12 Daschund Drive |
+      | City       | London            |
+      | Telephone  | 07700 900000      |
+    Then the owner should be registered
+
+  Scenario: Receive advice about missing information
+    Given I am a pet clinic receptionist
+    When I attempt to add an owner with no details
+    Then I should be advised as follows
+      | First Name | may not be empty  |
+      | Last Name  | may not be empty  |
+      | Address    | may not be empty  |
+      | City       | may not be empty  |
+      | Telephone  | may not be empty  |
+   
+  Scenario: Receive advice about problems with the Telephone Number
+    When I attempt to add an owner with the following:
+      | Telephone  | a                 |
+    Then I should be advised as follows:
+      | Telephone  | numeric value out of bounds (<10 digits>.<0 digits> expected) |
+
+
+

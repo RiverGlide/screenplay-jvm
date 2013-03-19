@@ -1,9 +1,9 @@
-package com.riverglide.screenplay.examples.petclinic.location;
+package com.riverglide.screenplay.examples.petclinic.screen;
 
-import com.riverglide.screenplay.Location;
+import com.riverglide.screenplay.Screen;
 import org.openqa.selenium.By;
 
-public class Home implements Location {
+public class Home implements Screen {
 
     private final String url = "http://localhost:8888/petclinic";
 

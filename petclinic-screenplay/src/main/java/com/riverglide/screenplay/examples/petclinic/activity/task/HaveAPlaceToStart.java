@@ -5,7 +5,7 @@ import com.riverglide.screenplay.Ensure;
 import com.riverglide.screenplay.Perform;
 import com.riverglide.screenplay.examples.petclinic.action.It;
 import com.riverglide.screenplay.examples.petclinic.action.ReadTheText;
-import com.riverglide.screenplay.examples.petclinic.location.Home;
+import com.riverglide.screenplay.examples.petclinic.screen.Home;
 
 public class HaveAPlaceToStart implements Perform {
 

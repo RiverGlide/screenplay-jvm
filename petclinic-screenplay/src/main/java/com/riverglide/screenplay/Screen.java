@@ -1,5 +1,5 @@
 package com.riverglide.screenplay;
 
-public interface Location {
+public interface Screen {
     String address();
 }
