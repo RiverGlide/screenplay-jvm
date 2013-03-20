@@ -20,17 +20,17 @@ public class Actor {
         return (T)abilities.get(ofAbility);
     }
 
-    public void attemptsTo(Perform interactionOrTask) {
-        attempt(interactionOrTask);
+    public void attemptTo(Perform something) {
+        attempt(something);
     }
 
-    public void should(Perform expectationCheck) {
-        attempt(expectationCheck);
+    public void should(Perform verification) {
+        attempt(verification);
     }
 
-    public void doesTheFollowing(Perform...tasks) {
-        for(Perform task : tasks) {
-            attempt(task);
+    public void doTheFollowing(Perform... someThings) {
+        for(Perform something : someThings) {
+            attempt(something);
         }
     }
 

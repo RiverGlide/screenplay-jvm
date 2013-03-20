@@ -9,7 +9,7 @@ public class LeaveTheClinic implements Perform {
         return new LeaveTheClinic();
     }
 
-    public void performAs(Actor actor) {
-        actor.attemptsTo(Quit.theBrowser());
+    public void performAs(Actor receptionist) {
+        receptionist.attemptTo(Quit.theBrowser());
     }
 }

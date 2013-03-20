@@ -8,7 +8,7 @@ public class Ensure implements Perform {
     }
 
     public void performAs(Actor actor) {
-        actor.attemptsTo(expectation);
+        actor.attemptTo(expectation);
     }
 
     private Ensure(Perform expectation) {
