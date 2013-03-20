@@ -10,7 +10,7 @@ import cucumber.api.java.en.When;
 
 public class ReceptionistSteps {
 
-    private Actor asAReceptionist = new PetClinicReceptionist().actor();
+    private Actor asAReceptionist = PetClinicReceptionist.actor();
 
     @When("^I start helping a customer$")
     public void I_start_helping_a_customer() throws Throwable {
