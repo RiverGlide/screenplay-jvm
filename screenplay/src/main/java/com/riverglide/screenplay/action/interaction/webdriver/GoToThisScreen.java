@@ -8,8 +8,8 @@ public class GoToThisScreen extends WebDriverInteraction implements Perform {
 
     private final String url;
 
-    public static GoToThisScreen goToThis(Screen place){
-        return new GoToThisScreen(place.address());
+    public static GoToThisScreen goToThis(Screen view){
+        return new GoToThisScreen(view.location());
     }
 
     public void performAs(Actor user) {

@@ -9,7 +9,7 @@ public class Home implements Screen {
 
     public By welcomeMessage() { return By.cssSelector("h2"); }
 
-    public String address() {
+    public String location() {
         return url;
     }
 
