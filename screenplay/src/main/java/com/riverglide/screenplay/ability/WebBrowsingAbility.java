@@ -5,8 +5,14 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-public class WebBrowsing {
-    public static WebDriver ability() {
+public class WebBrowsingAbility implements Ability {
+    private WebDriver ability = getWebDriver();
+
+    public WebDriver ability() {
+        return ability;
+    }
+
+    private static WebDriver getWebDriver() {
         return new HtmlUnitDriver() {
             @Override
             protected WebClient modifyWebClient(WebClient client) {

@@ -1,6 +1,6 @@
 package com.riverglide.screenplay;
 
-import org.openqa.selenium.WebDriver;
+import com.riverglide.screenplay.ability.Ability;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +11,8 @@ public class Actor {
     private String it;
 
     //TODO: This needs to be generic
-    public Actor with(WebDriver ability) {
-        abilities.put(WebDriver.class , ability);
+    public <T> Actor with(Ability ability) {
+        abilities.put(ability.getClass() , ability.ability());
         return this;
     }
 
