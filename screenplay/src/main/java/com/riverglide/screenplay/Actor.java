@@ -8,7 +8,7 @@ import java.util.Map;
 public class Actor {
 
     Map<Class,Ability> abilities = new HashMap<Class,Ability>();
-    private String it;
+    private ItemToRemember<?> it;
 
     public Actor with(Ability toDoSomething) {
         abilities.put(toDoSomething.getClass(), toDoSomething);
@@ -33,11 +33,11 @@ public class Actor {
         }
     }
 
-    public void remember(String it) {
+    public void remember(ItemToRemember<?> it) {
         this.it = it;
     }
 
-    public String getIt() {
+    public ItemToRemember<?> getIt() {
         return it;
     }
 

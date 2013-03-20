@@ -9,13 +9,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class ItSays implements Perform {
     private final String asExpected;
 
-    public static Perform itSays(String something) {
-        return new ItSays(something);
+    public void performAs(Actor actor) {
+        String it = actor.getIt().item();
+        assertThat(it, is(asExpected));
     }
 
-    public void performAs(Actor actor) {
-        String it = actor.getIt();
-        assertThat(it, is(asExpected));
+    public static Perform itSays(String something) {
+        return new ItSays(something);
     }
 
     private ItSays(String something) {
