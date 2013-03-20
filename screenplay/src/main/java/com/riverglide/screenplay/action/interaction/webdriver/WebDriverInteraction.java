@@ -1,5 +1,6 @@
-package com.riverglide.screenplay;
+package com.riverglide.screenplay.action.interaction.webdriver;
 
+import com.riverglide.screenplay.Actor;
 import com.riverglide.screenplay.ability.WebBrowsing;
 import org.openqa.selenium.WebDriver;
 

@@ -1,15 +1,14 @@
-package com.riverglide.screenplay.action.interaction;
+package com.riverglide.screenplay.action.interaction.webdriver;
 
 import com.riverglide.screenplay.Actor;
 import com.riverglide.screenplay.Screen;
 import com.riverglide.screenplay.Perform;
-import com.riverglide.screenplay.WebDriverInteraction;
 
 public class GoToTheLocation extends WebDriverInteraction implements Perform {
 
     private final String url;
 
-    public static GoToTheLocation gotToThe(Screen place){
+    public static GoToTheLocation goToThe(Screen place){
         return new GoToTheLocation(place.address());
     }
 

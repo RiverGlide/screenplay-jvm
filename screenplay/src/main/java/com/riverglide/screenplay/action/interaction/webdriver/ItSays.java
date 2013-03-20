@@ -1,4 +1,4 @@
-package com.riverglide.screenplay.action.interaction;
+package com.riverglide.screenplay.action.interaction.webdriver;
 
 import com.riverglide.screenplay.Actor;
 import com.riverglide.screenplay.Perform;
