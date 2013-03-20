@@ -10,7 +10,7 @@ public class ItSays implements Perform {
     private final String asExpected;
 
     public void performAs(Actor actor) {
-        String it = actor.getIt().item();
+        String it = actor.getIt();
         assertThat(it, is(asExpected));
     }
 

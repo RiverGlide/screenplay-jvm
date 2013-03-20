@@ -14,7 +14,7 @@ public class ActorTest {
 
         inARole.remember(itemToRemember);
 
-        assertThat(inARole.getIt().item(), is(itemToRemember.item()));
+        assertThat(inARole.getIt(), is(itemToRemember.item()));
     }
 
     @Test
@@ -24,6 +24,6 @@ public class ActorTest {
 
         inARole.remember(item);
 
-        assertThat(inARole.getIt().item(), is(item.item()));
+        assertThat(inARole.getIt(), is(item.item()));
     }
 }

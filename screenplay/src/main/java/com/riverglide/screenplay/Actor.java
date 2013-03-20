@@ -37,8 +37,8 @@ public class Actor {
         this.it = it;
     }
 
-    public ItemToRemember<?> getIt() {
-        return it;
+    public <T> T getIt() {
+        return it.item();
     }
 
     private void attempt(Perform task) {
