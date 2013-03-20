@@ -7,17 +7,16 @@ import java.util.Map;
 
 public class Actor {
 
-    Map abilities = new HashMap();
+    Map<Class,Ability> abilities = new HashMap<Class,Ability>();
     private String it;
 
-    //TODO: This needs to be generic
-    public <T> Actor with(Ability ability) {
-        abilities.put(ability.getClass() , ability.ability());
+    public Actor with(Ability toDoSomething) {
+        abilities.put(toDoSomething.getClass(), toDoSomething);
         return this;
     }
 
-    public <T> T ability(Class ofAbility) {
-        return (T)abilities.get(ofAbility);
+    public Ability ability(Class ofAbility) {
+        return abilities.get(ofAbility);
     }
 
     public void attemptTo(Perform something) {

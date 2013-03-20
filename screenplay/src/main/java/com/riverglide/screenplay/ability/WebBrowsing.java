@@ -5,11 +5,15 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
-public class WebBrowsingAbility implements Ability {
-    private WebDriver ability = getWebDriver();
+public class WebBrowsing implements Ability {
+    private WebDriver skill = getWebDriver();
 
-    public WebDriver ability() {
-        return ability;
+    public static WebBrowsing ability() {
+        return new WebBrowsing();
+    }
+
+    public WebDriver skills() {
+        return skill;
     }
 
     private static WebDriver getWebDriver() {
