@@ -1,14 +1,14 @@
 package com.riverglide.screenplay;
 
-public class Memorable<T> {
+public class Memorable<THING> {
 
-    private final T item;
+    private final THING toRemember;
 
-    public Memorable(T item) {
-        this.item = item;
+    public Memorable(THING toRemember) {
+        this.toRemember = toRemember;
     }
 
     public <T> T item() {
-        return (T)item;
+        return (T) toRemember;
     }
 }
