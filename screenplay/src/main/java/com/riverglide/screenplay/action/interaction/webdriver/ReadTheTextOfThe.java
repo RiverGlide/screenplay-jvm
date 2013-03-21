@@ -1,7 +1,7 @@
 package com.riverglide.screenplay.action.interaction.webdriver;
 
 import com.riverglide.screenplay.Actor;
-import com.riverglide.screenplay.ItemToRemember;
+import com.riverglide.screenplay.Memorable;
 import com.riverglide.screenplay.Perform;
 import org.openqa.selenium.By;
 
@@ -14,7 +14,7 @@ public class ReadTheTextOfThe extends WebDriverInteraction implements Perform {
 
     public void performAs(Actor actor) {
         String it = web(actor).findElement(elementLocation).getText();
-        actor.remember(new ItemToRemember<String>(it));
+        actor.remember(new Memorable<String>(it));
     }
 
     private ReadTheTextOfThe(By elementLocation) {

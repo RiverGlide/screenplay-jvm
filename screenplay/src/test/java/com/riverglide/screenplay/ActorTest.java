@@ -3,7 +3,6 @@ package com.riverglide.screenplay;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -13,11 +12,11 @@ public class ActorTest {
 
     @Test
     public void remembersAnyOldThing() throws Exception {
-        List<ItemToRemember<?>> items = new ArrayList<ItemToRemember<?>>();
-        items.add(new ItemToRemember<Float>(new Float(1.234)));
-        items.add(new ItemToRemember<Boolean>(false));
+        List<Memorable<?>> items = new ArrayList<Memorable<?>>();
+        items.add(new Memorable<Float>(new Float(1.234)));
+        items.add(new Memorable<Boolean>(false));
 
-        for(ItemToRemember<?> remembered : items) {
+        for(Memorable<?> remembered : items) {
             Actor inARole = new Actor();
             inARole.remember(remembered);
 
@@ -30,7 +29,7 @@ public class ActorTest {
     @Test
     public void rememberAString() throws Exception {
         Actor inARole = new Actor();
-        ItemToRemember<String> itemToRemember = new ItemToRemember<String>("Something to remember");
+        Memorable<String> itemToRemember = new Memorable<String>("Something to remember");
 
         inARole.remember(itemToRemember);
 
@@ -40,7 +39,7 @@ public class ActorTest {
     @Test
     public void rememberAnInteger() throws Exception {
         Actor inARole = new Actor();
-        ItemToRemember<Integer> remembered = new ItemToRemember<Integer>(1);
+        Memorable<Integer> remembered = new Memorable<Integer>(1);
 
         inARole.remember(remembered);
 
