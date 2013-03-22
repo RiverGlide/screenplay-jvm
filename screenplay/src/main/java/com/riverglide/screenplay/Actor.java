@@ -19,18 +19,14 @@ public class Actor {
         return abilities.get(ofAbility);
     }
 
-    public void attemptTo(Perform something) {
-        attempt(something);
+    public void attemptTo(Perform... somethings) {
+        for(Perform something : somethings) {
+            attempt(something);
+        }
     }
 
     public void should(Perform verification) {
         attempt(verification);
-    }
-
-    public void doTheFollowing(Perform... someThings) {
-        for(Perform something : someThings) {
-            attempt(something);
-        }
     }
 
     public void remember(Memorable<?> it) {

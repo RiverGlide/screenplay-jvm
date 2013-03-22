@@ -10,7 +10,7 @@ import com.riverglide.screenplay.examples.petclinic.screen.Home;
 public class HaveAPlaceToStart implements Perform {
 
     public void performAs(Actor asAReceptionist) {
-        asAReceptionist.doTheFollowing(
+        asAReceptionist.attemptTo(
                 ReadTheText.ofThe(Home.screen().welcomeMessage()),
                 Ensure.that(It.says("Welcome"))
         );

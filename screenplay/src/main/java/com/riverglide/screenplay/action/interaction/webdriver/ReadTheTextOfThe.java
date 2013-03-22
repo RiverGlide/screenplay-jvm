@@ -8,16 +8,19 @@ import org.openqa.selenium.By;
 public class ReadTheTextOfThe extends WebDriverInteraction implements Perform {
     private final By elementLocation;
 
+    public void performAs(Actor actor) {
+        actor.remember(new Memorable<String>(readByThe(actor)));
+    }
+
+    private String readByThe(Actor actor) {
+        return web(actor).findElement(elementLocation).getText();
+    }
+
     public static Perform readTheTextOfThe(By elementLocation) {
         return new ReadTheTextOfThe(elementLocation);
     }
 
-    public void performAs(Actor actor) {
-        String it = web(actor).findElement(elementLocation).getText();
-        actor.remember(new Memorable<String>(it));
-    }
-
-    private ReadTheTextOfThe(By elementLocation) {
+    public ReadTheTextOfThe(By elementLocation) {
         this.elementLocation = elementLocation;
     }
 }
