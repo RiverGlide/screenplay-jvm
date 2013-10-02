@@ -11,8 +11,12 @@ public class Actor {
     private Memorable<?> it;
 
     public Actor with(Ability toDoSomething) {
-        abilities.put(toDoSomething.getClass(), toDoSomething);
+        acquire(toDoSomething);
         return this;
+    }
+
+    private Ability acquire(Ability toDoSomething) {
+        return abilities.put(toDoSomething.getClass(), toDoSomething);
     }
 
     public Ability ability(Class ofAbility) {
