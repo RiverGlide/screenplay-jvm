@@ -11,7 +11,7 @@ public class Actor {
     private Memorable<?> it;
 
     public Actor with(Ability toDoSomething) {
-        acquire(toDoSomething);
+        acquire(theAbility(toDoSomething));
         return this;
     }
 
@@ -43,5 +43,9 @@ public class Actor {
 
     private void attempt(Perform task) {
         task.performAs(this);
+    }
+
+    private Ability theAbility(Ability toBeMadeMoreReadable) {
+        return toBeMadeMoreReadable;
     }
 }
