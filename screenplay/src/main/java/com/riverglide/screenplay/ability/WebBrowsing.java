@@ -22,16 +22,7 @@ public class WebBrowsing implements Ability {
     }
 
     private static WebDriver getWebDriver() {
-//        return new HtmlUnitDriver() {
-//            @Override
-//            protected WebClient modifyWebClient(WebClient client) {
-//                client.setCssErrorHandler(new SilentCssErrorHandler());
-//                return client;
-//            }
-//        };
-
-//        WebDriver driver = new PhantomJSDriver(desiredCapabilities());
-        WebDriver driver = new FirefoxDriver(desiredCapabilities());
+        WebDriver driver = new PhantomJSDriver(desiredCapabilities());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return driver;
     }

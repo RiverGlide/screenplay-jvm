@@ -6,6 +6,7 @@ import com.riverglide.screenplay.examples.petclinic.activity.Leave;
 import com.riverglide.screenplay.examples.petclinic.activity.Start;
 import com.riverglide.screenplay.examples.petclinic.activity.task.ChooseToFindAnOwner;
 import com.riverglide.screenplay.examples.petclinic.activity.task.SearchWith;
+import com.riverglide.screenplay.examples.petclinic.activity.task.SeeThatTheNumberOfOwnersIs;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.When;
 
 import static com.riverglide.screenplay.examples.petclinic.activity.task.ChooseToFindAnOwner.chooseToFindAnOwner;
 import static com.riverglide.screenplay.examples.petclinic.activity.task.SearchWith.searchWith;
+import static com.riverglide.screenplay.examples.petclinic.activity.task.SeeThatTheNumberOfOwnersIs.seeThatTheNumberOfOwnersIs;
 
 public class ReceptionistSteps {
 
@@ -42,8 +44,7 @@ public class ReceptionistSteps {
 
     @Then("^I should see all owners$")
     public void I_should_see_all_owners() throws Throwable {
-        // Express the Regexp above with the code you wish you had
-        throw new PendingException();
+        asAReceptionist.should(seeThatTheNumberOfOwnersIs(10));
     }
 
 
