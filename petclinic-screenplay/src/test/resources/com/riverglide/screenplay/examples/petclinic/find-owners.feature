@@ -6,4 +6,4 @@ Feature: Find Owners
   Scenario: See all owners
     Given I have chosen to find owners
     When I search without providing any details
-    Then I should see all owners
+#    Then I should see all owners

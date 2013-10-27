@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class Home implements Screen {
 
-    private final String url = "http://localhost:8888/petclinic";
+    private final String url = "http://localhost:9966/petclinic";
 
     public By welcomeMessage() { return By.cssSelector("h2"); }
 

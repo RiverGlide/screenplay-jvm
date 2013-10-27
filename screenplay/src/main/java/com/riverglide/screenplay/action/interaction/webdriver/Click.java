@@ -8,12 +8,12 @@ public class Click extends WebDriverInteraction implements Perform {
 
     private By ofInterest;
 
-    public Click(By elementOfInterest) {
-        ofInterest = elementOfInterest;
-    }
-
     public void performAs(Actor actor) {
         web(actor).findElement(ofInterest).click();
+    }
+
+    public Click(By elementOfInterest) {
+        ofInterest = elementOfInterest;
     }
 
     public static Click onThe(By elementOfInterest) {
